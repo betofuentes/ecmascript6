@@ -119,3 +119,23 @@ const helloPromise = () => {
         }
     });
 }
+
+//Clases
+class calculator {
+    //metodo constructor:
+    constructor(){
+        //asignación en scope global de dos variables.
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    //metodo sumar
+    sum(valueA, valueB) {
+        this.valueA = valueA;
+        this.valueB = valueB;
+
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2))
