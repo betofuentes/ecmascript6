@@ -139,3 +139,38 @@ class calculator {
 
 const calc = new calculator();
 console.log(calc.sum(2,2))
+
+import { hello } from './module';
+
+hello();
+
+//Generadores
+//sintaxis:
+function * helloWorld() {
+    if (true){
+        yield 'Hello, ';
+    }
+    if (true){
+        yield 'World';
+    }
+}
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value) // Regresa "Hello".
+console.log(generatorHello.next().value) // Regresa "World".
+console.log(generatorHello.next().value) // Regresa undefined.
+
+//Metodo includes() ecs7
+
+let numbers = [1,2,3,7,8]
+
+if (numbers.includes(7)){
+    console.log('Sí se encuentra el valor 7');
+}else {
+    console.log('No se encuentra.')
+}
+
+//elevando a la potencia esc7
+let base = 4;
+let exponent = 3;
+let result = base ** exponent;
